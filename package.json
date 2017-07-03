@@ -1,0 +1,17 @@
+{
+  "name": "file_server",
+  "version": "0.0.1",
+  "description": "a web file server",
+  "main": "index.js",
+  "repository": "https://github.com/zoeDylan/file_server.git",
+  "author": "zoeDylan <zoedylan@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-body": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "koa-send": "^4.1.0",
+    "koa-sendfile": "^2.0.0",
+    "koa-static": "^3.0.0"
+  }
+}
