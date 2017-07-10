@@ -14,11 +14,16 @@ body {
 #__dirList {
     li {
         cursor: pointer;
+        opacity: .8;
+        transition: all .3s;
         .icons {
             height: 2rem;
             width: 2rem;
             line-height: 2rem;
             font-size: 1.6rem;
+        }
+        &:hover {
+            opacity: 1;
         }
     }
 }

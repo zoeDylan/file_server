@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
-                    <input v-model="dirPath" type="text" class="form-control" placeholder="Search for...">
+                    <input v-model="dirPath" type="text" class="form-control" placeholder="输入文件地址：">
                     <span class="input-group-btn">
                         <button  v-on:click="getDir" class="btn btn-default" type="button">Go!</button>
                     </span>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading">内容：<span :class="error ? 'text-danger':'text-info'">{{msg}}</span></div>
+            <div class="panel-heading" v-if="msg">提示：<span :class="error ? 'text-danger':'text-info'">{{msg}}</span></div>
             <div class="panel-body">
                 <ul id="__dirList" class="list-group">
                     <li class="list-group-item list-group-item-warning" v-for="item in list" v-if="item.type == 'dir'" v-on:click="dirPath=item.path;getDir();">
