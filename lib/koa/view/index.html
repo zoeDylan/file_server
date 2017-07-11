@@ -38,7 +38,7 @@
                     <li class="list-group-item list-group-item-warning" v-for="item in list" v-if="item.type == 'dir'" v-on:click="dirPath=item.path;getDir();">
                         <i :class="['icons','glyphicon','glyphicon-folder-open']"></i> {{item.name}}
                     </li>
-                    <li class="list-group-item list-group-item-info" v-else-if="item.type=='file'" v-on:click="item.path;getFile(item.path);">
+                    <li class="list-group-item list-group-item-info" v-else-if="item.type=='file'" v-on:click="getFile(item.path);">
                         <i :class="['icons','glyphicon','glyphicon-floppy-disk']"></i> {{item.name}}
                     </li>
                     <li class="list-group-item list-group-item-danger" v-else-if="item.type==null">
