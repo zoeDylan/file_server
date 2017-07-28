@@ -75,3 +75,35 @@ body {
         overflow-y: auto;
     }
 }
+
+.panel-heading {
+    font-size: 1.4rem;
+}
+
+.dirArr {
+    padding: 0 0 1rem 0;
+    overflow: hidden;
+    span {
+        margin: .5rem;
+        cursor: pointer;
+        transition: all .3s;
+        float: left;
+        display: block;
+        &:hover {
+            background-color: #5bc0de;
+        }
+    }
+}
+
+@media screen and (min-width:640px) {
+    #__dirList {
+        li {
+            display: block;
+            float: left;
+            margin: 1rem;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
