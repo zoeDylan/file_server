@@ -21,48 +21,45 @@
 
 <body>
     <div id="__dir" class="content">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="input-group">
-                    <input v-model="dirPath" type="text" class="form-control" placeholder="输入文件地址：">
-                    <span class="input-group-btn">
-                        <button  v-on:click="getDir" class="btn btn-default" type="button">Go!</button>
-                    </span>
-                </div>
-                <div class="history">
-                    <div>
-                        <ul class="list-group">
-                            <li class="list-group-item" v-for="item in savePath"><a :href="'./#dir='+item">{{item}}</a></li>
-                        </ul>
+        <div class="inputContent">
+            <div class="row ">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">地址：</span>
+                        <input v-model="dirPath" type="text" class="form-control" placeholder="输入文件地址：">
+                    </div>
+                    <div class="history">
+                        <div>
+                            <ul class="list-group">
+                                <li class="list-group-item" v-for="item in savePath"><a :href="'./#dir='+item">{{item}}</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            <p class="dirArr">
+                <span class="label label-warning" v-for="item in dirArr" @click="dirPath=item;">{{item}}</span>
+            </p>
+            <p class="msg">
+                <span v-if="msg" :class="error ? 'text-danger':'text-info'">{{msg}}</span>
+            </p>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <p class="dirArr">
-                    <span class="label label-warning" v-for="item in dirArr" @click="dirPath=item;">{{item}}</span>
-                </p>
-                <span v-if="msg" :class="error ? 'text-danger':'text-info'">{{msg}}</span>
-            </div>
-            <div class="panel-body">
-                <p class="loading" v-if="loading">
-                    <span class="glyphicon glyphicon-refresh"></span>
-                </p>
-                <ul id="__dirList" class="list-group">
-                    <li class="list-group-item list-group-item-warning" v-for="item in list" v-if="item.type == 'dir'" @click="dirPath=item.path;">
-                        <i :class="['icons','glyphicon','glyphicon-folder-open']"></i> {{item.name}}
-                    </li>
-                    <li class="list-group-item list-group-item-info" v-else-if="item.type=='file'" @click="getFile(item.path);">
-                        <i :class="['icons','glyphicon','glyphicon-floppy-disk']"></i> {{item.name}}
-                    </li>
-                    <li class="list-group-item list-group-item-danger" v-else-if="item.type==null">
-                        <i :class="['icons','glyphicon','glyphicon-floppy-remove']"></i> {{item.name}}
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <p class="loading" v-if="loading">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </p>
+        <ul id="__dirList" class="list-group">
+            <li class="list-group-item list-group-item-warning" v-for="item in list" v-if="item.type == 'dir'" @click="dirPath=item.path;">
+                <i :class="['icons','glyphicon','glyphicon-folder-open']"></i> {{item.name}}
+            </li>
+            <li class="list-group-item list-group-item-info" v-else-if="item.type=='file'" @click="getFile(item.path);">
+                <i :class="['icons','glyphicon','glyphicon-floppy-disk']"></i> {{item.name}}
+            </li>
+            <li class="list-group-item list-group-item-danger" v-else-if="item.type==null">
+                <i :class="['icons','glyphicon','glyphicon-floppy-remove']"></i> {{item.name}}
+            </li>
+        </ul>
     </div>
 
     <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
