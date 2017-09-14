@@ -30,9 +30,9 @@
                     </div>
                     <div class="history">
                         <div>
-                            <ul class="list-group">
-                                <li class="list-group-item" v-for="item in savePath"><a :href="'./#dir='+item">{{item}}</a></li>
-                            </ul>
+                            <div class="list-group">
+                                <button class="list-group-item" @click="location.href='./#dir='+item" v-for="item in savePath">{{item}}</button>
+                            </div>
                         </div>
 
                     </div>

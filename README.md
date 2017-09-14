@@ -6,23 +6,23 @@
 
 # 使用
 
-> 1. `npm i koa koa-router koa-send koa-body koa-static koa-sendfile koa-session`
+1. `npm i koa koa-router koa-send koa-body koa-static koa-sendfile koa-session`
 
-> 2. `node index.js`
+2. `node index.js`
 
-> 3. `http://localhost:3000`
+3. `http://localhost:3000`
 
 # 说明
 
-> 1. 浏览文件夹下面的所有文件和文件夹
+1. 浏览文件夹下面的所有文件和文件夹
 
-> 2. 文件、文件夹和无权限访问的都有单独标记
+2. 文件、文件夹和无权限访问的都有单独标记
 
-> 3. 页面文件位于：`lib/koa/view`
+3. 页面文件位于：`lib/koa/view`
 
-> 4. `lib/file`用于读取文件夹内容
+4. `lib/file`用于读取文件夹内容
 
-> 5. 页面`css`、`js`进行了处理，使用的是自己写的模版[jobTemplate](https://github.com/zoeDylan/jobTemplate)
+5. 页面`css`、`js`进行了处理，使用的是自己写的模版[jobTemplate](https://github.com/zoeDylan/jobTemplate)
 
 # 预览
 
@@ -30,32 +30,36 @@
 
 # 日志
 
-> 2017-08-01
+2017-09-14
 
->> 1. 修复浏览器无`cookie`的情况下打开`/file?**`的地址报错问题
+1. 优化历史下拉
 
->> 2. 取消`GO`按钮
+2017-08-01
 
->> 3. 固定顶部栏目
+1. 修复浏览器无`cookie`的情况下打开`/file?**`的地址报错问题
 
-> 2017-07-28
+2. 取消`GO`按钮
 
->> 1. 添加路径切换
+3. 固定顶部栏目
 
->> 2. 添加文件夹计数
+2017-07-28
 
-> 2017-07-26 
+1. 添加路径切换
 
->> 1. 添加历史记录
+2. 添加文件夹计数
 
->> 2. 优化代码
+2017-07-26 
 
->> 3. 添加排序
+1. 添加历史记录
 
-> 2017-07-11
+2. 优化代码
 
->> 1. 点击出现下载后再次点击无反应修复
+3. 添加排序
 
-> 2017-07-10
+2017-07-11
 
->> 1. 上传首版
+1. 点击出现下载后再次点击无反应修复
+
+2017-07-10
+
+1. 上传首版
