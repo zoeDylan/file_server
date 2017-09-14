@@ -26,7 +26,7 @@
 
 # 预览
 
-![操作测试](./readmeFile/v-0.1.1.gif)
+![操作测试](./readmeFile/v-0.1.2.gif)
 
 # 日志
 

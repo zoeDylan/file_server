@@ -1,6 +1,6 @@
 {
   "name": "file_server",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "a web file server",
   "main": "index.js",
   "repository": "https://github.com/zoeDylan/file_server.git",
